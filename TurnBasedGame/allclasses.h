@@ -1,5 +1,6 @@
 #pragma once
+
 #include "rogue.h"
 #include "cleric.h"
 #include "wizard.h"
-#include "warrior.h" /* this is a test*/
+#include "warrior.h" 
