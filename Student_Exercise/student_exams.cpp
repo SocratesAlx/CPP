@@ -1,8 +1,10 @@
 #include <iostream>
+#include <string> // Προσθήκη βιβλιοθήκης για χρήση string
 
 using namespace std;
 
 struct Student {
+    string name; // Προσθήκη πεδίου για το όνομα του μαθητή
     float grapth;
     float proforikh;
     float finalgrade;
@@ -24,6 +26,11 @@ int main() {
 
     for (int i = 0; i < studentsCount; ++i) {
         cout << "Student No. " << i+1 << endl;
+
+        // Ζητάμε το όνομα του μαθητή
+        cout << "Enter student's name: ";
+        cin.ignore(); // Αγνοούμε τυχόν προηγούμενα newline characters
+        getline(cin, students[i].name);
 
         do {
             cout << "Dwse vathmologia grapths eksetashs: ";
@@ -48,9 +55,8 @@ int main() {
 
     cout << "Students sorted by final grade (highest to lowest):" << endl;
     for (int i = 0; i < studentsCount; ++i) {
-        cout << "Student No. " << i + 1 << ": Final Grade " << students[i].finalgrade << endl;
+        cout << "Student Name: " << students[i].name << ", Final Grade: " << students[i].finalgrade << endl;
     }
 
     return 0;
 }
-
